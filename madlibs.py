@@ -1,4 +1,4 @@
-# Use string concatenation to make a madlib.
+# Use string concatenation to make a madlib creator.
 
 adj1 = input('Adjective: ')
 adj2 = input('Another adjective: ')
