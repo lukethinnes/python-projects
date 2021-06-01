@@ -5,15 +5,15 @@ import string
 
 
 def get_valid_word(words):
-    word = random.choice(words)
-    while '-' in word or ' ' in word:
+    word = random.choice(words)  # randomly selects a word
+    while '-' in word or ' ' in word:  # keep going if dashes or spaces exist in a word
         word = random.choice(words)
 
-    return word.upper()
+    return word.upper()  # makes the word uppercase
 
 
 def hangman():
-    word = get_valid_word(words)
+    word = get_valid_word(words)  # sets the valid word from words
     word_letters = set(word)
     alphabet = set(string.ascii_uppercase)
     used_letters = set()
@@ -39,7 +39,7 @@ def hangman():
                 lives = lives - 1
                 print('\nYour letter,', user_letter, 'is not in the word.')
         elif user_letter in used_letters:
-            print('\nYou have already used that letter. Guess another.')
+            print('\nYou have already used that letter. Please guess another.')
 
         else:
             print('\nPlease enter a valid letter.')
