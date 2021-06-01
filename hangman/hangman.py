@@ -13,7 +13,7 @@ def get_valid_word(words):
 
 
 def hangman():
-    word = get_valid_word(words)
+    word = get_valid_word(words)  # sets the valid word from words
     word_letters = set(word)
     alphabet = set(string.ascii_uppercase)
     used_letters = set()
