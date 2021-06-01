@@ -5,11 +5,11 @@ import string
 
 
 def get_valid_word(words):
-    word = random.choice(words)
-    while '-' in word or ' ' in word:
+    word = random.choice(words)  # randomly selects a word
+    while '-' in word or ' ' in word:  # keep going if dashes or spaces exist in a word
         word = random.choice(words)
 
-    return word.upper()
+    return word.upper()  # makes the word uppercase
 
 
 def hangman():
