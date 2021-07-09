@@ -20,3 +20,39 @@ def available_moves(self):
         if spot == ' ':
             moves.append(i)
     return moves
+
+def empty_squares(self)
+    return ' ' in self.board
+
+def num_empty_squares(self)
+    return self.board.count(' ')
+
+def make_move(self, square, letter):
+    if self.board[square] == ' ':
+        self.board[square]
+        return True
+    return False
+
+def play(game, x_player, o_player, print_game=True)
+    if print_game:
+        game.print_board_nums()
+
+    letter = 'x'
+
+    while game.empty_squares();
+        if letter == '0':
+            square = o_player.get_move(game)
+        else:
+            square = x_player.get_move(game)
+
+        if game.make_move(square, letter):
+            if print_game:
+                print(letter + f' makes a move to square {square}')
+                game.print_board()
+                print('')
+
+                letter = '0' if letter == 'X' else 'X'
+                
+
+
+
