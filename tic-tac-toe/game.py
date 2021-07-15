@@ -30,6 +30,8 @@ def num_empty_squares(self)
 def make_move(self, square, letter):
     if self.board[square] == ' ':
         self.board[square]
+        if self.winner(square, letter):
+            self.current_winner = letter
         return True
     return False
 
@@ -50,6 +52,8 @@ def play(game, x_player, o_player, print_game=True)
                 print(letter + f' makes a move to square {square}')
                 game.print_board()
                 print('')
+            if game.current_winner:
+                    print(letter + ' wins!')
 
                 letter = '0' if letter == 'X' else 'X'
                 
