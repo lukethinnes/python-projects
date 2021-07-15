@@ -1,9 +1,13 @@
 from player import HumanPlayer, RandomComputerPlayer
 
-class TicTacToe
+class TicTacToe():
     def __init__(self):
-        self.board = [' ' for _ in range(9)]
+        self.board = self.make_board()
         self.current_winner = None
+
+    @staticmethod 
+    def make_board():
+        return [' ' for _ in range(9)]
 
     def print_board(self):
         for row in [self.board[i*3: (i+1)*3] for i in range(3)]:
@@ -23,10 +27,10 @@ def available_moves(self):
             moves.append(i)
     return moves
 
-def empty_squares(self)
+def empty_squares(self):
     return ' ' in self.board
 
-def num_empty_squares(self)
+def num_empty_squares(self):
     return self.board.count(' ')
 
 def make_move(self, square, letter):
@@ -60,13 +64,13 @@ def winner(self, square, letter):
 
 
 
-def play(game, x_player, o_player, print_game=True)
+def play(game, x_player, o_player, print_game=True):
     if print_game:
         game.print_board_nums()
 
     letter = 'x'
 
-    while game.empty_squares();
+    while game.empty_squares():
         if letter == '0':
             square = o_player.get_move(game)
         else:
@@ -80,12 +84,13 @@ def play(game, x_player, o_player, print_game=True)
             if game.current_winner:
                 print(letter + ' wins!')
             return letter 
-                letter = '0' if letter == 'X' else 'X'
+               
+        letter = '0' if letter == 'X' else 'X'
 
         if print_game:
             print('It\'s a tie!')
                 
-if __name__ = '__main__':
+if __name__ == '__main__':
     x_player = HumanPlayer('X')
     o_player = RandomComputerPlayer('O')
     t = TicTacToe()
